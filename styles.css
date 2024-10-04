@@ -1,92 +1,97 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Body Style */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #000; /* Black background */
-    color: #fff;
-    overflow-x: hidden;
+    color: white;
 }
 
-header {
+/* Home Section */
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 50px 0;
 }
 
-header h1 {
-    font-size: 48px;
-    color: white;
+.home h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
 }
 
-header h2 {
-    font-size: 32px;
-    color: white;
-    margin-top: 20px;
+.home h2 {
+    font-size: 1.5em;
+    color: #fff;
 }
 
+/* Packages Section */
 .packages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
+    padding: 50px;
+    background-color: #111; /* Dark background for package section */
 }
 
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: white;
+}
+
+.package-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Package Box */
 .package {
-    background-color: #1a1a1a;
+    background-color: #222;
     border-radius: 10px;
     padding: 20px;
-    width: 100%;
-    max-width: 350px;
+    width: 250px;
+    margin: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.package:hover {
-    transform: scale(1.05);
-}
-
-.package h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.package p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.package img {
+/* Image Placeholder Styling */
+.image-placeholder {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    background-color: #333; /* Placeholder background */
+    height: 150px;
+    border: 2px dashed #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 15px;
+    background-color: #333;
 }
 
+.image-placeholder p {
+    color: #999;
+    font-size: 1.1em;
+}
+
+/* Button Styling */
 .learn-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00ff00; /* Green button */
+    background-color: #00FF00; /* Green button */
     color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 .learn-btn:hover {
-    background-color: #00cc00;
+    background-color: #32CD32; /* Lighter green on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .packages {
-        grid-template-columns: 1fr;
-    }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    color: #fff;
 }
