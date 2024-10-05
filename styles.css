@@ -6,6 +6,67 @@ body {
     color: white;
 }
 
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #111; /* Dark background */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.menu-line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.menu-items {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.menu-items li {
+    margin: 15px 0;
+}
+
+.menu-items li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.menu-items li a:hover {
+    color: #00FF00;
+}
+
 /* Home Section */
 .home {
     height: 100vh;
@@ -29,6 +90,7 @@ body {
 .packages {
     padding: 50px;
     background-color: #111; /* Dark background for package section */
+    margin-top: 80px; /* To account for the fixed navbar */
 }
 
 .section-title {
