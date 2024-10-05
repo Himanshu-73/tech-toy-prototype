@@ -1,55 +1,67 @@
-/* General Body Style */
+/* General Styles (Same as before) */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000; /* Black background */
+    background-color: #000;
     color: white;
 }
-
-/* Navigation Bar Styling */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #111; /* Dark background */
+/* Sidebar Menu */
+.menu-items {
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 1000;
-}
-
-.menu-icon {
-    cursor: pointer;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 25px;
-}
-
-.menu-line {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-}
-
-.menu-items {
-    display: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    align-items: flex-start; /* Align items to the left */
+    padding-top: 30px; /* Add space from the top */
+    transition: left 0.3s ease;
+    z-index: 999;
 }
 
 .menu-items.active {
+    left: 0;
+}
+
+.menu-items li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em; /* Adjust size as needed */
+    padding: 10px 15px;
+    width: 100%; /* Make the button full width */
+    transition: color 0.3s ease;
+}
+
+.menu-items a:hover {
+    background-color: #333; /* Highlight effect */
+    color: #00FF00;
+}
+
+/* Hamburger Menu Icon Styles (Same as before) */
+.menu-icon {
+    width: 35px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 50px;
-    left: 0;
+    justify-content: space-between;
+    height: 30px;
+    z-index: 1000; /* Stay above everything */
+}
+
+.menu-line {
     width: 100%;
-    background-color: #111;
-    padding: 15px 0;
-    text-align: center;
+    height: 4px;
+    background-color: white;
 }
 
 .menu-items li {

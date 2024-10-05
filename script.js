@@ -1,8 +1,8 @@
-// Toggle the Menu
 function toggleMenu() {
     const menu = document.getElementById('menu-items');
-    menu.classList.toggle('active');
+    menu.classList.toggle('active'); // Add or remove 'active' class
 }
+
 
 // Smooth Scroll for Menu Links
 const menuLinks = document.querySelectorAll('.menu-items a');
